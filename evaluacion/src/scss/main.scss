@@ -1,0 +1,43 @@
+@use "contenido";
+@use "base/variables" as b;
+@use "base/mixins" as m;
+
+// html {
+//   font-size: 62.5%;
+// }
+
+body {
+  background-color: rgb(222, 158, 158);
+  h1{text-align: center;}
+}
+
+.video-banner video{
+
+  max-width: 100%;
+}
+.menu-nav {
+  padding-top: 1rem;
+  a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  @include m.tl {
+    visibility: hidden;
+    opacity: 0;
+
+    a {
+      display: block;
+      
+      
+    }
+  }
+}
+
+h1{
+  font-size: 4.4rem;
+  color: rgb(85, 69, 69);
+  @include m.text-3d;
+}
