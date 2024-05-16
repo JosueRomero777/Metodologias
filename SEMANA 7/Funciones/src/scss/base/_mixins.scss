@@ -1,0 +1,41 @@
+@use "variables" as b;
+
+@mixin cell {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin tl {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin lp {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin colum($colum, $separacion) {
+  display: grid;
+  grid-template-columns: repeat($colum, 1fr);
+  gap: $separacion;
+}
+
+@mixin text-sombra {
+  text-shadow: 1px 1px 0 rgb(47, 45, 45), 1px 1.5px 0 rgb(47, 45, 45),
+    1px 2px 0 rgb(47, 45, 45), 1px 2.5px 0 rgb(47, 45, 45);
+}
+
+@mixin text-3d {
+  text-shadow: 1px 1px 0 rgb(150, 150, 150), 1px 2px 0 rgb(150, 150, 150),
+    1px 3px 0 rgb(150, 150, 150), 1px 4px 0 rgb(150, 150, 150),
+    1px 5px 0 rgb(150, 150, 150), 1px 6px 0 rgb(150, 150, 150),
+    1px 7px 0 rgb(150, 150, 150), 1px 8px 0 rgb(150, 150, 150),
+    1px 9px 0 rgb(150, 150, 150), 1px 10px 0 rgb(150, 150, 150),
+    1px 11px 0 rgb(150, 150, 150), 1px 12px 0 rgb(150, 150, 150),
+    1px 13px 0 rgb(150, 150, 150), 1px 14px 0 rgb(150, 150, 150),
+    1px 15px 0 rgb(150, 150, 150), 1px 15px 30px rgb(57 56 56);
+}
