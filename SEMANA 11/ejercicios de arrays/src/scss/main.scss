@@ -1,0 +1,79 @@
+@use "contenido";
+@use "base/variables" as b;
+@use "base/mixins" as m;
+
+// html {
+//   font-size: 62.5%;
+// }
+
+body {
+  background-color: rgb(222, 158, 158);
+  h1{text-align: center;}
+}
+
+.video-banner video{
+
+  max-width: 100%;
+}
+.menu-nav {
+  padding-top: 1rem;
+  a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  @include m.tl {
+    visibility: hidden;
+    opacity: 0;
+
+    a {
+      display: block;
+      
+      
+    }
+  }
+}
+
+h1{
+  font-size: 4.4rem;
+  color: rgb(85, 69, 69);
+  @include m.text-3d;
+}
+
+#list  {
+padding: 0;
+  
+}
+
+#list li {
+  font-size: 2rem;
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 0.5rem;
+  font-family:'Times New Roman', Times, serif ;
+  list-style: none;
+  
+
+ 
+}
+
+#list li:nth-last-child(2) {
+  background-color: yellow;
+}
+#list li:nth-last-child(1) {
+  background-color: rgb(204, 204, 70);
+  border-bottom-right-radius: 1rem;
+}
+#list li:nth-last-child(3) {
+  background-color: rgb(204, 204, 70);
+}
+#list li:nth-last-child(4) {
+  background-color: yellow;
+}
+#list li:nth-last-child(5) {
+  background-color: rgb(204, 204, 70);
+  border-top-left-radius: 1rem;
+}
+
+
